@@ -1,3 +1,5 @@
+@import './mixins.scss';
+
 :root {
   --primary-color: #1F1F1F;
   --primary-light-color: #292929;
@@ -293,6 +295,9 @@ h1, h2, h3, h3, h4, h5, h6 {
   &:focus, &:focus-within {
     border-color: rgb(15, 124, 250);
   }
+  &.error {
+    border-color: red;
+  }
 
   -moz-appearance: textfield;
 
@@ -301,6 +306,11 @@ h1, h2, h3, h3, h4, h5, h6 {
     -webkit-appearance: none;
     margin: 0;
   }
+}
+.input-error {
+  color: red;
+  margin: rem(5);
+  min-height: rem(15);
 }
 
 
@@ -343,4 +353,19 @@ h1, h2, h3, h3, h4, h5, h6 {
 
 .page {
   flex: 1;
+}
+
+// animation
+.rotate-animation {
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

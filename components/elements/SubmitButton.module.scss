@@ -1,0 +1,20 @@
+@import '../../styles/mixins.scss';
+
+.submitBtn {
+  // margin-top: rem(10);
+  .loading {
+    margin: 0 0 rem(6) rem(8);
+    line-height: rem(16);
+    .loadingIcon {
+      width: rem(16);
+      height: rem(16);
+      display: block;
+    }
+  }
+  :focus {
+    outline: none;
+  }
+  &:not(:last-child) {
+    margin-right: rem(10);
+  }
+}

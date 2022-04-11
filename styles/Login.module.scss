@@ -1,0 +1,6 @@
+@import './mixins.scss';
+.form {
+  padding: rem(120) rem(30);
+  max-width: rem(500);
+  margin: 0 auto;
+}

@@ -1,0 +1,17 @@
+@import '../../styles/mixins.scss';
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .inputFieldWrapper {
+    position: relative;
+    width: 100%;
+  }
+  .inputLabel {
+    margin: 0 0 rem(5) rem(5);
+  }
+  &:not(:last-child) {
+    margin-bottom: rem(10);
+  }
+}
