@@ -1,0 +1,20 @@
+@import '../../styles/mixins.scss';
+
+.blogListingCard {
+  width: rem(370);
+  min-height: rem(500);
+  border-radius: rem(15);
+  box-shadow: 0 1px 6px 0 rgb(0 0 0 / 20%);
+  overflow: hidden;
+  background-color: #f8f8f8;
+  .contentImage {
+    height: rem(230);
+  }
+  .content {
+    flex: 1;
+    padding: rem(29) rem(26) rem(17);
+    .contentTitle {
+      color: #E39392;
+    }
+  }
+}

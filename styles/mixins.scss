@@ -1,0 +1,15 @@
+@use 'sass:math';
+
+// functions
+@function rem($size) {
+  $remSize: math.div($size, 16);
+
+  @return #{$remSize}rem;
+}
+
+
+@function vw($size) {
+  $perSize: math.div($size, $baseSize) * 100;
+
+  @return #{$perSize}vw;
+}

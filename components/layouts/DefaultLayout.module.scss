@@ -1,0 +1,16 @@
+@import '../../styles/mixins.scss';
+
+.defaultLayout {
+  width: 100%;
+  min-height: 100vh;
+  .mainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: rem(73);
+    background-color: var(--background-color);
+    // .page {
+    //   flex: 1;
+    // }
+  }
+}

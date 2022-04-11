@@ -1,0 +1,346 @@
+:root {
+  --primary-color: #1F1F1F;
+  --primary-light-color: #292929;
+  --secondary-color: #00D25B;
+  --secondary-light-color: black;
+
+  --text-primary-color: #404040;
+  --text-primary-light-color: #b7b7b7;
+  --text-secondary-color: black;
+  --text-secondary-light-color: black;
+
+  --btn-primary-color: black;
+  --btn-primary-light-color: #fff;
+  --btn-secondary-color: black;
+  --btn-secondary-light-color: black;
+
+
+  --navbar-color: #1F1F1F;
+  --navbar-light-color: #292929;
+  --navbar-text-color: #E3E3E3;
+  --navbar-hover-color: #414141;
+  --navbar-active-color: #222222;
+
+
+  --text-color: #404040;
+
+
+  --background-color: #f2f2f2;
+
+
+  --card-color: #f8f8f8;
+
+  --input-background-color: #f8f8f8;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/SourceSansPro-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: medium;
+  font-weight: 500;
+  src: url("/fonts/SourceSansPro-SemiBold.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: bold;
+  font-weight: 700;
+  src: url("/fonts/SourceSansPro-Bold.ttf");
+  font-display: swap;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: rem(18);
+  color: var(--text-color);
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+h1, h2, h3, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+// Flex styling
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.justify {
+  &-center {
+    justify-content: center;
+  }
+  &-end {
+    justify-content: flex-end;
+  }
+  &-start {
+    justify-content: flex-start;
+  }
+}
+.items {
+  &-center {
+    align-items: center;
+  }
+  &-end {
+    align-items: flex-end;
+  }
+  &-start {
+    align-items: flex-start;
+  }
+}
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.float-left {
+  float: left;
+}
+
+// margin
+.mr-auto {
+  margin-right: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.mb-auto {
+  margin-bottom: auto;
+}
+.mb-14 {
+  margin-bottom: rem(14);
+}
+.mb-20 {
+  margin-bottom: rem(20);
+}
+.mr-5 {
+  margin-right: rem(5);
+}
+
+// text size
+.text-12 {
+  font-size: rem(12);
+  line-height: rem(15);
+}
+.text-14 {
+  font-size: rem(14);
+  line-height: rem(18);
+}
+.text-16 {
+  font-size: rem(16);
+}
+.text-18 {
+  font-size: rem(18);
+  line-height: rem(23);
+}
+.text-20 {
+  font-size: rem(20);
+}
+.text-24 {
+  font-size: rem(24);
+}
+.text-30 {
+  font-size: rem(30);
+}
+.text-36 {
+  font-size: rem(36);
+}
+.text-42 {
+  font-size: rem(42);
+}
+.text-65 {
+  font-size: rem(65);
+}
+
+// size
+.h-full {
+  height: 100%;
+}
+.h-screen {
+  height: 100vh;
+}
+.w-full {
+  width: 100%;
+}
+.w-screen {
+  width: 100vw;
+}
+// Image styling
+
+.img-contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// Button styling
+.btn-base {
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0 rem(30);
+  line-height: rem(40);
+  text-align: center;
+  outline: none;
+  border-radius: rem(20);
+  text-transform: uppercase;
+}
+.primary-btn {
+  @extend .btn-base;
+  border: 1px solid var(--btn-primary-color);
+  color: var(--btn-primary-light-color);
+  background-color: var(--btn-primary-color);
+  &:active {
+    background-color: transparent;
+    color: var(--btn-primary-color);
+  }
+}
+.secondary-btn {
+  @extend .btn-base;
+  border: 1px solid var(--btn-primary-color);
+  color: var(--btn-primary-color);
+  background-color: transparent;
+  &:active {
+    background-color: var(--btn-primary-color);
+    color: var(--btn-primary-light-color);
+  }
+}
+.primary-btn-light {
+  @extend .btn-base;
+  border: 1px solid var(--btn-primary-light-color);
+  color: var(--btn-primary-color);
+  background-color: var(--btn-primary-light-color);
+  &:active {
+    background-color: transparent;
+    color: var(--btn-primary-light-color);
+  }
+}
+.secondary-btn-light {
+  @extend .btn-base;
+  border: 1px solid var(--btn-primary-light-color);
+  color: var(--btn-primary-light-color);
+  background-color: transparent;
+  &:active {
+    background-color: var(--btn-primary-light-color);
+    color: var(--btn-primary-color);
+  }
+}
+.btn-1 {
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0 rem(45);
+  line-height: rem(60);
+  text-align: center;
+  outline: none;
+  border: 1px solid var(--btn-primary-color);
+  color: var(--btn-primary-color);
+  background-color: var(--btn-primary-light-color);
+  border-radius: rem(30);
+  text-transform: uppercase;
+}
+
+// Input style
+
+.disable-number-arrow {
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.input {
+  padding: rem(10) rem(15);
+  width: 100%;
+  resize: none;
+  border: 1px solid #787878;
+  border-radius: rem(3);
+  outline: none;
+  background-color: var(--input-background-color);
+
+  &:focus, &:focus-within {
+    border-color: rgb(15, 124, 250);
+  }
+
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+
+// .input-error {
+//   @extend .text-12;
+//   color: red;
+//   margin: 0 0 rem(5) rem(5);
+// }
+
+// Text style
+.bold {
+  font-weight: 700;
+}
+.semi-bold {
+  font-weight: 500;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.first-capitalize {
+  &:first-letter {
+    text-transform: capitalize;
+  }
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.logo-wrapper {
+  > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.page {
+  flex: 1;
+}
